@@ -3,6 +3,7 @@ import { Config } from "sst/node/config";
 import handler from "@notes/core/handler";
 import { calculateCost } from "@notes/core/cost";
 
+
 export const main = handler(async (event) => {
   const { storage, source } = JSON.parse(event.body || "{}");
   const amount = calculateCost(storage);

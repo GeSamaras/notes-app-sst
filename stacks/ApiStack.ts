@@ -3,8 +3,9 @@ import { StorageStack } from "./StorageStack";
 
 export function ApiStack({ stack }: StackContext) {
   const { table } = use(StorageStack);
-  const STRIPE_SECRET_KEY = new Config.Secret(stack, "sk_test_51OLO2QJ0rpAKf5RrjMxIS4cAaNKi3lv3N1B8mc4P6H4StyrCLVAbKgBGJId6UQouGPZ01tw6mluD3XGYCxNVa6kE00v5neujdR");
+  const STRIPE_SECRET_KEY = new Config.Secret(stack, "STRIPE_SECRET_KEY");
 
+  //sk_test_51OLO2QJ0rpAKf5RrjMxIS4cAaNKi3lv3N1B8mc4P6H4StyrCLVAbKgBGJId6UQouGPZ01tw6mluD3XGYCxNVa6kE00v5neujdR
   // Create the API
   const api = new Api(stack, "Api", {
     defaults: {
